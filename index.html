@@ -769,7 +769,7 @@ const state={cat:'All',q:'',sort:'feat',inStock:false,shown:PAGE};
 const count=id=>P.filter(p=>p.cat===id).length;
 $('#catRail').innerHTML = CATS.map(c=>`<button class="cat" data-cat="${c.id}">${ART[c.icon]}<span>${c.name}</span><em>${count(c.id)}</em></button>`).join('');
 $('#chips').innerHTML = [{id:'All',name:'All'},...CATS].map(c=>`<button class="chip" data-cat="${c.id}">${c.name} <b>${c.id==='All'?P.length:count(c.id)}</b></button>`).join('');
-$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/headlights.html">Custom Headlights</a></li><li><a href="/blog/">FJ Cruiser Guides</a></li><li><a href="/shipping-returns/">Shipping &amp; Returns</a></li>';
+$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/headlights.html">Custom Headlights</a></li><li><a href="/blog/">FJ Cruiser Guides</a></li><li><a href="/shipping-returns/">Shipping &amp; Returns</a></li><li><a href="/about/">About &amp; Contact</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li>';
 document.querySelectorAll('[data-count]').forEach(el=>el.textContent=P.filter(p=>p.fj).length);
 document.addEventListener('click',e=>{
   const c=e.target.closest('[data-cat]'); if(!c) return;

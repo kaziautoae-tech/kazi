@@ -104,11 +104,10 @@ https://www.kaziautotrading.com/*  https://kaziautotrading.com/:splat  301!
 # old pages
 /shop/  /  301
 /shop/page/*  /  301
-/contact-us/  /  301
-/contact/  /  301
-/about/  /  301
-/about-us/  /  301
-/refund_returns/  /  301
+/contact-us/  /about/  301
+/contact/  /about/  301
+/about-us/  /about/  301
+/refund_returns/  /shipping-returns/  301
 /terms-and-conditions/  /  301
 /payment-method/  /  301
 /help-center/  /  301
