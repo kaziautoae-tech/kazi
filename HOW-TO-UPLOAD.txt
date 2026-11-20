@@ -1,0 +1,35 @@
+FJ ZONE WEBSITE - HOW TO PUT IT ONLINE (NETLIFY, FREE)
+
+1. Unzip this file on your computer. You get a folder called "fjzone-site".
+2. Go to https://app.netlify.com/drop and log in (free account).
+3. Drag the whole "fjzone-site" folder onto the page.
+4. Wait about 1 minute. Your site is live on a netlify.app address. Open it and test it.
+5. Connect your domain:
+   Site configuration -> Domain management -> Add a domain -> type your domain.
+   Netlify shows you DNS records. Add them at the company where you bought your domain.
+   Wait a few minutes up to 24-48 hours. HTTPS (padlock) turns on automatically.
+
+HOW ORDERS WORK
+- The customer adds products to the cart and taps "Send order on WhatsApp".
+- WhatsApp opens with the full order (items, prices, name, phone, address, payment choice)
+  sent to +971 58 241 3312.
+- You confirm the order and send your bank details on WhatsApp, or arrange cash on delivery.
+
+NEWSLETTER SIGN-UPS
+- Emails from the "New arrivals" box are saved in Netlify:
+  your site -> Forms -> "newsletter". (If you don't see it, turn on Form detection in Forms settings,
+  then upload the folder again.)
+
+TO UPDATE THE SITE LATER
+- Netlify -> your site -> Deploys -> drag the updated folder onto the deploy area.
+
+GOOGLE SETUP (do this once, after uploading)
+1. Go to https://search.google.com/search-console and add the property: kaziautotrading.com
+   (choose "Domain" and add the TXT record it gives you at your domain company, or choose
+   "URL prefix" https://kaziautotrading.com/ and verify with the HTML tag / file option).
+2. In Search Console -> Sitemaps, submit:  sitemap.xml
+3. In Search Console -> URL inspection, paste https://kaziautotrading.com/ and click "Request indexing".
+   Do the same for your most important product pages (new switch, A-pillar brackets, headlights).
+4. Create / claim your Google Business Profile for Kazi Auto (Deira) at https://business.google.com
+   and add the website kaziautotrading.com. Ask customers for Google reviews.
+5. Put https://kaziautotrading.com in your Instagram bio and Amazon store.
