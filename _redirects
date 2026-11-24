@@ -361,7 +361,10 @@ https://www.kaziautotrading.com/*  https://kaziautotrading.com/:splat  301!
 /contact/  /about/  301
 /about-us/  /about/  301
 /refund_returns/  /shipping-returns/  301
-/terms-and-conditions/  /  301
+/terms-and-conditions/  /terms/  301
+/terms-and-conditions  /terms/  301
+/terms-of-service/  /terms/  301
+/refund-policy/  /shipping-returns/  301
 /payment-method/  /  301
 /help-center/  /  301
 /help-article/*  /  301
