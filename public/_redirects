@@ -180,21 +180,6 @@
 /product-category/accessories-for-all-cars/*  /  301
 
 # spam pages injected into the old hacked WordPress site, and old uploads: tell Google they are gone
-/category/*  /404.html  410
-/tag/*  /404.html  410
-/wp-content/*  /404.html  410
-/wp-admin/*  /404.html  410
-/wp-includes/*  /404.html  410
-/ably.php  /404.html  410
-/ricky-casino-review-sydney-202/  /404.html  410
-/king-johnnie-casino-review-6000-200-free-spins-bonu/  /404.html  410
-/tgvulkan-vegas-betrug-abzocke-oder-serioes-anbieter-im-test-online-world-betrug-orgtg/  /404.html  410
-/pin-up-p-comprar-em-bia-amaral-latso/  /404.html  410
-/depozit-mostbet-a-popolnit-schet-zhe-vyvesti-deng/  /404.html  410
-/get-your-head-plus-your-heart-to-the-game-with-the-mostbet-app-793/  /404.html  410
-/50-free-spinow-bez-depozytu-watts-kasynie-vulkan-vega/  /404.html  410
-/fitbit-announces-new-wellness-tracker-called-luxe/  /404.html  410
-/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%85%D8%AD%D9%85%D9%88%D9%84-%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A-2/  /404.html  410
 /product-sitemap.xml  /sitemap.xml  301
 /page-sitemap.xml  /sitemap.xml  301
 /category-sitemap.xml  /sitemap.xml  301
