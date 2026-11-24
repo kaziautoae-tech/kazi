@@ -5,3 +5,5 @@ The website files are in `public/`. Cloudflare deploys this branch automatically
 - `public/google-products.xml` - Google Merchant Center product feed (read every 24 hours).
   Regenerate it whenever products or prices change.
 - `public/_redirects` - old WordPress URLs redirected to the new pages.
+
+Deployed by Cloudflare Workers Builds from the `cloudflare-site` branch.
