@@ -787,7 +787,7 @@ const state={cat:'All',q:'',sort:'feat',inStock:false,shown:PAGE};
 const count=id=>P.filter(p=>p.cat===id).length;
 $('#catRail').innerHTML = CATS.map(c=>`<button class="cat" data-cat="${c.id}">${ART[c.icon]}<span>${c.name}</span><em>${count(c.id)}</em></button>`).join('');
 $('#chips').innerHTML = [{id:'All',name:'الكل'},...CATS].map(c=>`<button class="chip" data-cat="${c.id}">${c.name} <b>${c.id==='All'?P.length:count(c.id)}</b></button>`).join('');
-$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/ar/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/ar/headlights.html">أنوار مخصصة</a></li><li><a href="/shipping-returns/">الشحن والإرجاع</a></li><li><a href="/about/">من نحن وتواصل معنا</a></li><li><a href="/privacy-policy/">سياسة الخصوصية</a></li>';
+$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/ar/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/ar/headlights.html">أنوار مخصصة</a></li><li><a href="/shipping-returns/">الشحن والإرجاع</a></li><li><a href="/return-policy/">سياسة الإرجاع والاسترداد</a></li><li><a href="/about/">من نحن وتواصل معنا</a></li><li><a href="/privacy-policy/">سياسة الخصوصية</a></li>';
 document.querySelectorAll('[data-count]').forEach(el=>el.textContent=P.filter(p=>p.fj).length);
 document.addEventListener('click',e=>{
   const c=e.target.closest('[data-cat]'); if(!c) return;
