@@ -506,6 +506,7 @@ input#cp,input[type=email]{direction:ltr;text-align:right}
 .lang{font-family:'Archivo',sans-serif!important}
 </style>
 <style>.share{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:14px 0}.share-l{font:600 12px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.08em;opacity:.7}.share-b{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:2px solid currentColor;border-radius:6px;background:transparent;color:inherit;font:700 13px Archivo,system-ui,sans-serif;text-decoration:none;cursor:pointer}.share-wa{color:#1f8f4e}.share-b:hover{background:rgba(0,0,0,.06)}[dir=rtl] .share-b,[dir=rtl] .share-l{font-family:Cairo,Archivo,sans-serif;letter-spacing:0}</style>
+<link rel="manifest" href="/manifest-ar.webmanifest"><meta name="theme-color" content="#121110"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="FJ ZONE"><meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
 
@@ -1019,7 +1020,7 @@ const tile=(href,img,name,sub)=>`<a class="ctile" href="${href}"><img src="${img
 $('#catRail').innerHTML=`<div class="cgroup"><h3 class="gh">${HV2.g1}</h3><div class="ctiles">${["Screens", "Interior", "Exterior", "Lighting", "Offroad"].map(c=>tile(HV2.pre+'/shop/'+SL2[c]+'/',tileImg(c),HV2.names[c],count(c)+' '+HV2.items)).join('')}${tile(HV2.pre+'/headlights.html','/hl/laser.jpg',HV2.hlName,HV2.hlCount)}</div></div><div class="cgroup"><h3 class="gh">${HV2.g2}</h3><div class="ctiles two">${["Universal", "Electronics"].map(c=>tile(HV2.pre+'/shop/'+SL2[c]+'/',tileImg(c),HV2.names[c],count(c)+' '+HV2.items)).join('')}</div></div>`;
 document.querySelectorAll('[data-total]').forEach(el=>el.textContent=P.length);
 $('#chips').innerHTML = [{id:'All',name:'الكل'},...CATS].map(c=>`<button class="chip" data-cat="${c.id}">${c.name} <b>${c.id==='All'?P.length:count(c.id)}</b></button>`).join('');
-$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/ar/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/ar/headlights.html">أنوار مخصصة</a></li><li><a href="/shipping-returns/">الشحن والإرجاع</a></li><li><a href="/return-policy/">سياسة الإرجاع والاسترداد</a></li><li><a href="/terms/">الشروط والأحكام</a></li><li><a href="/about/">من نحن وتواصل معنا</a></li><li><a href="/privacy-policy/">سياسة الخصوصية</a></li>';
+$('#footCats').innerHTML = CATS.map(c=>`<li><a href="/ar/shop/${CATSLUG[c.id]}/">${c.name}</a></li>`).join('')+'<li><a href="/ar/headlights.html">أنوار مخصصة</a></li><li><a href="/shipping-returns/">الشحن والإرجاع</a></li><li><a href="/return-policy/">سياسة الإرجاع والاسترداد</a></li><li><a href="/terms/">الشروط والأحكام</a></li><li><a href="/app/">📱 حمّل التطبيق</a></li><li><a href="/about/">من نحن وتواصل معنا</a></li><li><a href="/privacy-policy/">سياسة الخصوصية</a></li>';
 document.querySelectorAll('[data-count]').forEach(el=>el.textContent=P.filter(p=>p.fj).length);
 document.addEventListener('click',e=>{
   const c=e.target.closest('[data-cat]'); if(!c) return;
@@ -1275,5 +1276,6 @@ window.addEventListener('hashchange',()=>{if(location.hash==='#cart')openLayer($
 
 </script>
 <script>document.querySelectorAll('.share-cp').forEach(b=>b.onclick=async()=>{const u=location.origin+location.pathname;try{await navigator.clipboard.writeText(u)}catch(e){const t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}const s=b.querySelector('span'),o=s.textContent;s.textContent=b.dataset.done;setTimeout(()=>s.textContent=o,1800)})</script>
+<script src="/assets/app.js?v=1" defer></script>
 </body>
 </html>

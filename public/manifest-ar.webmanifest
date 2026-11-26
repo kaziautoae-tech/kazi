@@ -1,0 +1,70 @@
+{
+ "id": "/ar/",
+ "name": "FJ ZONE من كازي أوتو",
+ "short_name": "FJ ZONE",
+ "description": "قطع وإكسسوارات تويوتا إف جي كروزر وشاشات أندرويد وإكسسوارات السيارات — كازي أوتو، ديرة، دبي.",
+ "lang": "ar",
+ "dir": "rtl",
+ "start_url": "/ar/?source=app",
+ "scope": "/",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#121110",
+ "theme_color": "#121110",
+ "categories": [
+  "shopping",
+  "lifestyle"
+ ],
+ "icons": [
+  {
+   "src": "/icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "/icons/maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "قطع إف جي كروزر",
+   "url": "/ar/#fj",
+   "icons": [
+    {
+     "src": "/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "كل المنتجات",
+   "url": "/ar/#shop",
+   "icons": [
+    {
+     "src": "/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "السلة",
+   "url": "/ar/#cart",
+   "icons": [
+    {
+     "src": "/icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}

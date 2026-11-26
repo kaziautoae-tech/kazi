@@ -10,3 +10,14 @@
   Cache-Control: public, max-age=2592000
 /assets/*
   Cache-Control: public, max-age=604800
+
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=3600
+/manifest-ar.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=3600
+/assets/app.js
+  Cache-Control: public, max-age=3600

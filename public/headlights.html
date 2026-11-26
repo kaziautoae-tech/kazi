@@ -172,6 +172,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 <style>.psearch{display:flex;align-items:center;gap:8px;height:40px;border:2px solid var(--ink,#121110);border-radius:6px;padding:0 10px;background:#fff;width:230px}.psearch input{border:0;background:transparent;outline:0;width:100%;font-size:15px;font-family:inherit}@media(max-width:860px){header .wrap{flex-wrap:wrap;height:auto!important;padding-top:10px;padding-bottom:10px;row-gap:10px}.psearch{order:9;flex:1 1 100%;width:auto;height:44px}}</style>
 <style>.share{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:14px 0}.share-l{font:600 12px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.08em;opacity:.7}.share-b{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:2px solid currentColor;border-radius:6px;background:transparent;color:inherit;font:700 13px Archivo,system-ui,sans-serif;text-decoration:none;cursor:pointer}.share-wa{color:#1f8f4e}.share-b:hover{background:rgba(0,0,0,.06)}[dir=rtl] .share-b,[dir=rtl] .share-l{font-family:Cairo,Archivo,sans-serif;letter-spacing:0}</style>
+<link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#121110"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="FJ ZONE"><meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body>
 <div class="strip"><div class="wrap"><span><b>Worldwide shipping</b> · Free in UAE over <b>AED 500</b></span><span class="hide-m">Built to order in Deira, Dubai</span></div></div>
@@ -238,7 +239,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 FJ ZONE · Kazi Auto, Naif 9 Building, Shop 8, Deira, Dubai · +971 58 241 3312</span><span>Orders confirmed on WhatsApp · Bank transfer or cash on delivery (UAE).</span><span><a href="/shipping-returns/">Shipping &amp; Returns</a> · <a href="/return-policy/">Return &amp; Refund Policy</a> · <a href="/terms/">Terms &amp; Conditions</a></span></div></footer>
+<footer><div class="wrap"><span>© 2026 FJ ZONE · Kazi Auto, Naif 9 Building, Shop 8, Deira, Dubai · +971 58 241 3312</span><span>Orders confirmed on WhatsApp · Bank transfer or cash on delivery (UAE).</span><span><a href="/shipping-returns/">Shipping &amp; Returns</a> · <a href="/return-policy/">Return &amp; Refund Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/app/">Get the app</a></span></div></footer>
 
 <div class="lb" id="lb"><button aria-label="Close">×</button><img alt=""></div>
 <div class="toast" id="toast" role="status"><span id="toastMsg"></span><a href="index.html#cart">View cart</a></div>
@@ -359,5 +360,6 @@ function addToCart(){
 renderOptions(); renderSummary(); show('night-set'); updCount();
 </script>
 <script>document.querySelectorAll('.share-cp').forEach(b=>b.onclick=async()=>{const u=location.origin+location.pathname;try{await navigator.clipboard.writeText(u)}catch(e){const t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}const s=b.querySelector('span'),o=s.textContent;s.textContent=b.dataset.done;setTimeout(()=>s.textContent=o,1800)})</script>
+<script src="/assets/app.js?v=1" defer></script>
 </body>
 </html>
