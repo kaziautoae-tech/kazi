@@ -1,6 +1,6 @@
 /* FJ ZONE app service worker */
 const V='fjz-v1';
-const SHELL=['/','/ar/','/offline.html','/assets/pages.css?v=20261126c','/icons/icon-192.png','/truck-dark.png','/logo-light.png'];
+const SHELL=['/','/ar/','/offline.html','/assets/pages.css?v=20261126d','/icons/icon-192.png','/truck-dark.png','/logo-light.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).catch(()=>{}));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{
