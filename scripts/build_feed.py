@@ -25,7 +25,7 @@ for sl in sorted(os.listdir('products')):
     av='out_of_stock' if 'OutOfStock' in off.get('availability','') else 'in_stock'
     brand=prod.get('brand'); brand=brand.get('name') if isinstance(brand,dict) else (brand or 'FJ ZONE')
     desc=re.sub(r'\s+',' ',html.unescape(prod.get('description') or prod['name'])).strip()[:4900]
-    items.append(dict(id=(prod.get('sku') or sl)[:50],title=prod['name'][:150],desc=desc,link=prod['url'],img=imgs[0],extra=imgs[1:10],price=f"{float(price):.2f} AED",av=av,brand=brand,ptype=prod.get('category','')))
+    items.append(dict(slug=sl,id=(prod.get('sku') or sl)[:50],title=(lambda s:(s if len(s)<=150 else s[:150][:s[:150].rfind(' ')]))(html.unescape(prod['name'])),desc=desc,link=prod['url'],img=imgs[0],extra=imgs[1:10],price=f"{float(price):.2f} AED",av=av,brand=brand,ptype=prod.get('category','')))
 out=['<?xml version="1.0" encoding="UTF-8"?>','<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">','<channel>','<title>FJ ZONE by Kazi Auto</title>','<link>https://kaziautotrading.com/</link>','<description>FJ ZONE product feed for Google Merchant Center</description>']
 seen=set()
 for it in items:
@@ -41,3 +41,30 @@ for it in items:
 out+=['</channel>','</rss>']
 open('google-products.xml','w',encoding='utf-8').write('\n'.join(out)+'\n')
 print('items',len(items),'no image',skipped_noimg,'no price',skipped_noprice)
+
+# ---- Arabic feed (google-products-ar.xml): same products, IDs, prices, stock and images; Arabic title/description; links to /ar/ pages
+ar_out=['<?xml version="1.0" encoding="UTF-8"?>','<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">','<channel>','<title>FJ ZONE من كازي أوتو</title>','<link>https://kaziautotrading.com/ar/</link>','<description>موجز منتجات FJ ZONE باللغة العربية</description>']
+ar_n=0; ar_skip=0
+for it in items:
+    f=f'ar/products/{it["slug"]}/index.html'
+    if not os.path.exists(f): ar_skip+=1; continue
+    t=open(f,encoding='utf-8').read(); ap=None
+    for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',t,re.S):
+        try: j=json.loads(m.group(1))
+        except Exception: continue
+        for o in j.get('@graph',[j]):
+            if o.get('@type')=='Product': ap=o
+    if not ap or not re.search(r'[\u0600-\u06FF]',ap.get('name','')): ar_skip+=1; continue
+    title=html.unescape(ap['name'])
+    if len(title)>150: title=title[:150]; title=title[:title.rfind(' ')]
+    desc=re.sub(r'\s+',' ',html.unescape(ap.get('description') or ap['name'])).strip()[:4900]
+    e=lambda s:escape(str(s))
+    ar_out.append('<item>')
+    ar_out+=[f'<g:id>{e(it["id"])}</g:id>',f'<g:title>{e(title)}</g:title>',f'<g:description>{e(desc)}</g:description>',f'<g:link>https://kaziautotrading.com/ar/products/{it["slug"]}/</g:link>',f'<g:image_link>{e(it["img"])}</g:image_link>']
+    ar_out+=[f'<g:additional_image_link>{e(x)}</g:additional_image_link>' for x in it['extra']]
+    ar_out+=[f'<g:price>{it["price"]}</g:price>',f'<g:availability>{it["av"]}</g:availability>','<g:condition>new</g:condition>',f'<g:brand>{e(it["brand"])}</g:brand>',f'<g:product_type>{e(ap.get("category") or it["ptype"])}</g:product_type>','<g:identifier_exists>no</g:identifier_exists>',
+          '<g:shipping><g:country>AE</g:country><g:price>0.00 AED</g:price></g:shipping>' if float(it['price'].split()[0])>=500 else '<g:shipping><g:country>AE</g:country><g:price>30.00 AED</g:price></g:shipping>']
+    ar_out.append('</item>'); ar_n+=1
+ar_out+=['</channel>','</rss>']
+open('google-products-ar.xml','w',encoding='utf-8').write('\n'.join(ar_out)+'\n')
+print('arabic items',ar_n,'skipped',ar_skip)
