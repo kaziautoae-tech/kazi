@@ -2,6 +2,8 @@
   // FJ ZONE website (kaziautotrading.com) - static site served by Cloudflare Workers
   "name": "broad-credit-9da5",
   "compatibility_date": "2026-11-01",
+  // Rebuild the Google Merchant feed (public/google-products.xml) on every deploy
+  "build": { "command": "python3 scripts/build_feed.py public" },
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
