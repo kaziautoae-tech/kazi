@@ -174,6 +174,15 @@ h1,h2,h3,h4,.btn,nav.main a,.eyebrow,.strip,.opt .nm,.tag,.price{letter-spacing:
 <style>.psearch{display:flex;align-items:center;gap:8px;height:40px;border:2px solid var(--ink,#121110);border-radius:6px;padding:0 10px;background:#fff;width:230px}.psearch input{border:0;background:transparent;outline:0;width:100%;font-size:15px;font-family:inherit}@media(max-width:860px){header .wrap{flex-wrap:wrap;height:auto!important;padding-top:10px;padding-bottom:10px;row-gap:10px}.psearch{order:9;flex:1 1 100%;width:auto;height:44px}}</style>
 <style>.share{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:14px 0}.share-l{font:600 12px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.08em;opacity:.7}.share-b{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:2px solid currentColor;border-radius:6px;background:transparent;color:inherit;font:700 13px Archivo,system-ui,sans-serif;text-decoration:none;cursor:pointer}.share-wa{color:#1f8f4e}.share-b:hover{background:rgba(0,0,0,.06)}[dir=rtl] .share-b,[dir=rtl] .share-l{font-family:Cairo,Archivo,sans-serif;letter-spacing:0}</style>
 <link rel="manifest" href="/manifest-ar.webmanifest"><meta name="theme-color" content="#121110"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="FJ ZONE"><meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+.catbar{background:var(--card,#F7F4EC);border-bottom:1.5px solid var(--line,#D5CEBE)}
+.catbar .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;height:50px;align-items:center}
+.catbar .wrap::-webkit-scrollbar{display:none}
+.catbar a{flex:0 0 auto;padding:7px 13px;border-radius:999px;font-weight:700;font-size:13.5px;text-decoration:none;white-space:nowrap;color:var(--ink,#121110)}
+.catbar a:hover{background:var(--paper-2,#E6E0D2)}.catbar a.hot{background:var(--accent,#F2B705)}.catbar a.all{border:1.5px solid var(--ink,#121110)}
+[dir=rtl] .catbar a{font-family:Cairo,Archivo,sans-serif}
+@media(min-width:1321px){.catbar{display:none}}
+</style>
 </head>
 <body>
 <div class="strip"><div class="wrap"><span><b>شحن لجميع أنحاء العالم</b> · مجاني في الإمارات فوق <b>500 درهم</b></span><span class="hide-m">حسب الطلب في ديرة، دبي</span></div></div>
@@ -184,6 +193,7 @@ h1,h2,h3,h4,.btn,nav.main a,.eyebrow,.strip,.opt .nm,.tag,.price{letter-spacing:
 <a class="lang-btn" href="/headlights.html" hreflang="en" lang="en">English</a>
   <a class="cart-btn" href="/ar/index.html#cart"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>السلة <span class="count" id="cartCount">0</span></a>
 </div></header>
+<nav class="catbar" aria-label="Categories"><div class="wrap"><a class="hot" href="/ar/#exclusive">★ حصريات</a><a href="/ar/shop/fj-cruiser-android-screens/">شاشات وإلكترونيات إف جي</a><a href="/ar/shop/fj-cruiser-interior-accessories/">داخلية إف جي</a><a href="/ar/shop/fj-cruiser-exterior-body-parts/">خارجية وهيكل إف جي</a><a href="/ar/shop/fj-cruiser-lights/">إضاءة إف جي</a><a href="/ar/shop/fj-cruiser-off-road-parts/">طرق وعرة إف جي</a><a href="/ar/headlights.html">أنوار مخصصة</a><a href="/ar/shop/car-accessories-uae/">إكسسوارات سيارات عامة</a><a href="/ar/shop/car-android-screens-carplay-uae/">شاشات وكاربلاي للسيارات</a><a class="all" href="/ar/#shop">كل المنتجات</a></div></nav>
 
 <main>
 <section class="cfg"><div class="wrap">
