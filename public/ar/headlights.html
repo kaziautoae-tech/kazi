@@ -171,13 +171,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .lang-btn{display:inline-flex;align-items:center;height:42px;padding:0 14px;border:2px solid var(--ink);border-radius:var(--r);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;margin-left:auto;margin-right:10px}.lang-btn+.cart-btn{margin-left:0}.lang-btn:hover{background:var(--ink);color:var(--paper)}
 h1,h2,h3,h4,.btn,nav.main a,.eyebrow,.strip,.opt .nm,.tag,.price{letter-spacing:0!important}h1,h2{line-height:1.3}.step-h h3 i{margin-right:0;margin-left:8px}.lang-btn{margin-left:10px!important;margin-right:auto!important}
 </style>
+<style>.psearch{display:flex;align-items:center;gap:8px;height:40px;border:2px solid var(--ink,#121110);border-radius:6px;padding:0 10px;background:#fff;width:230px}.psearch input{border:0;background:transparent;outline:0;width:100%;font-size:15px;font-family:inherit}@media(max-width:860px){header .wrap{flex-wrap:wrap;height:auto!important;padding-top:10px;padding-bottom:10px;row-gap:10px}.psearch{order:9;flex:1 1 100%;width:auto;height:44px}}</style>
 </head>
 <body>
 <div class="strip"><div class="wrap"><span><b>شحن لجميع أنحاء العالم</b> · مجاني في الإمارات فوق <b>500 درهم</b></span><span class="hide-m">حسب الطلب في ديرة، دبي</span></div></div>
 <header class="site"><div class="wrap">
   <a class="brand" href="/ar/"><img src="/truck-dark.png" alt=""><div class="wm"><strong>FJ ZONE</strong><span>من كازي أوتو</span></div></a>
   <nav class="main"><a href="/ar/index.html#shop">المتجر</a><a class="on" href="/ar/headlights.html">أنوار مخصصة</a><a href="/ar/index.html#visit">زورونا</a><a href="/ar/index.html#about">من نحن</a></nav>
-  <a class="lang-btn" href="/headlights.html" hreflang="en" lang="en">English</a>
+  <form class="psearch" action="/ar/" role="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" name="q" placeholder="ابحث عن المنتجات…" aria-label="بحث"></form>
+<a class="lang-btn" href="/headlights.html" hreflang="en" lang="en">English</a>
   <a class="cart-btn" href="/ar/index.html#cart"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>السلة <span class="count" id="cartCount">0</span></a>
 </div></header>
 
