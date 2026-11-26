@@ -136,7 +136,6 @@
 
 # old pages
 /shop/  /  301
-/shop/page/*  /  301
 /contact-us/  /about/  301
 /contact/  /about/  301
 /about-us/  /about/  301
@@ -144,40 +143,15 @@
 /terms-and-conditions/  /  301
 /payment-method/  /  301
 /help-center/  /  301
-/help-article/*  /  301
 /sale/  /  301
 /product-deals-of-the-day/  /  301
 /cart/  /  301
-/my-account/*  /  301
-/checkout/*  /  301
-/product-brand/*  /  301
 
 # old categories -> closest new category
-/product-category/accessories-for-all-cars/toyota-fj150-accessories/*  /  301
-/product-category/accessories-for-all-cars/toyota-fj100-accessories/*  /  301
-/product-category/android-screen/*  /shop/fj-cruiser-android-screens/  301
 /product-category/android-screen  /shop/fj-cruiser-android-screens/  301
-/product-category/tesla-screen/*  /shop/fj-cruiser-android-screens/  301
 /product-category/tesla-screen  /shop/fj-cruiser-android-screens/  301
-/product-category/tesla-style-vertical-screen/*  /shop/fj-cruiser-android-screens/  301
-/product-category/nissan-tesla-screen/*  /shop/fj-cruiser-android-screens/  301
-/product-category/electronics/*  /shop/fj-cruiser-android-screens/  301
-/product-category/gadgets/car-dvr-cameras/*  /shop/fj-cruiser-android-screens/  301
-/product-category/automobiles-motorcycles/car-electronics/*  /shop/fj-cruiser-android-screens/  301
-/product-category/led-lightening/*  /shop/fj-cruiser-lights/  301
-/product-category/fog-lamps-drl-covers/*  /shop/fj-cruiser-lights/  301
-/product-category/accessories-for-all-cars/flexible-drl-switchbacks/*  /shop/fj-cruiser-lights/  301
-/product-category/interior/*  /shop/fj-cruiser-interior-accessories/  301
-/product-category/exterior/*  /shop/fj-cruiser-exterior-body-parts/  301
-/product-category/exterior-clearance/*  /shop/fj-cruiser-exterior-body-parts/  301
-/product-category/modifications/*  /shop/fj-cruiser-exterior-body-parts/  301
 /product-category/modifications  /shop/fj-cruiser-exterior-body-parts/  301
-/product-category/accessories-for-all-cars/phone-holder/*  /shop/car-accessories-uae/  301
-/product-category/gadgets/*  /shop/car-accessories-uae/  301
 /product-category/gadgets  /shop/car-accessories-uae/  301
-/product-category/car-care/*  /shop/car-accessories-uae/  301
-/product-category/car-audio-system/*  /shop/car-accessories-uae/  301
-/product-category/accessories-for-all-cars/*  /  301
 
 # spam pages injected into the old hacked WordPress site, and old uploads: tell Google they are gone
 /product-sitemap.xml  /sitemap.xml  301
@@ -340,3 +314,31 @@
 /ar/products/window-digital-switch-4pcs-land-rover-range-l405-l494/  /ar/shop/range-rover-land-cruiser-prado-accessories/  301
 /products/x-vision-grille-led-lights-fj-cruiser-2008-2022/  /shop/fj-cruiser-exterior-body-parts/  301
 /ar/products/x-vision-grille-led-lights-fj-cruiser-2008-2022/  /ar/shop/fj-cruiser-exterior-body-parts/  301
+
+# Wildcard rules (must come after the simple ones)
+/shop/page/*  /  301
+/help-article/*  /  301
+/my-account/*  /  301
+/checkout/*  /  301
+/product-brand/*  /  301
+/product-category/accessories-for-all-cars/toyota-fj150-accessories/*  /  301
+/product-category/accessories-for-all-cars/toyota-fj100-accessories/*  /  301
+/product-category/android-screen/*  /shop/fj-cruiser-android-screens/  301
+/product-category/tesla-screen/*  /shop/fj-cruiser-android-screens/  301
+/product-category/tesla-style-vertical-screen/*  /shop/fj-cruiser-android-screens/  301
+/product-category/nissan-tesla-screen/*  /shop/fj-cruiser-android-screens/  301
+/product-category/electronics/*  /shop/fj-cruiser-android-screens/  301
+/product-category/gadgets/car-dvr-cameras/*  /shop/fj-cruiser-android-screens/  301
+/product-category/automobiles-motorcycles/car-electronics/*  /shop/fj-cruiser-android-screens/  301
+/product-category/led-lightening/*  /shop/fj-cruiser-lights/  301
+/product-category/fog-lamps-drl-covers/*  /shop/fj-cruiser-lights/  301
+/product-category/accessories-for-all-cars/flexible-drl-switchbacks/*  /shop/fj-cruiser-lights/  301
+/product-category/interior/*  /shop/fj-cruiser-interior-accessories/  301
+/product-category/exterior/*  /shop/fj-cruiser-exterior-body-parts/  301
+/product-category/exterior-clearance/*  /shop/fj-cruiser-exterior-body-parts/  301
+/product-category/modifications/*  /shop/fj-cruiser-exterior-body-parts/  301
+/product-category/accessories-for-all-cars/phone-holder/*  /shop/car-accessories-uae/  301
+/product-category/gadgets/*  /shop/car-accessories-uae/  301
+/product-category/car-care/*  /shop/car-accessories-uae/  301
+/product-category/car-audio-system/*  /shop/car-accessories-uae/  301
+/product-category/accessories-for-all-cars/*  /  301
